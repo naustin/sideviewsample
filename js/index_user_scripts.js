@@ -51,6 +51,10 @@
         {
          activate_subpage("#uib_signernames"); 
         });
+        $(document).on("click", "#btnContribNext", function(evt)
+        {
+         activate_subpage("#uib_signernames"); 
+        });
 }
  $(document).ready(register_event_handlers);
 })();

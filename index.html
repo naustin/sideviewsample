@@ -78,13 +78,37 @@
          <div class="table-thing with-label widget uib_w_14 d-margins" data-uib="app_framework/input" data-ver="0">
           <label class="narrow-control label-inline">Worldwide Work</label>
 
-          <input class="wide-control" placeholder="0.00" type="text">
+          <input class="wide-control" type="text" value="0.00">
          </div>
          <div class="table-thing with-label widget uib_w_15 d-margins" data-uib="app_framework/input" data-ver="0">
           <label class="narrow-control label-inline">Local</label>
 
-          <input class="wide-control" type="text" placeholder="0.00">
-         </div><span class="uib_shim"></span>
+          <input class="wide-control" type="text" value="0.00">
+         </div>
+         <div class="table-thing with-label widget uib_w_23 d-margins" data-uib="app_framework/textarea" data-ver="0">
+          <label class="narrow-control label-inline">Total</label>
+          <textarea class="wide-control" rows="1" wrap="soft" placeholder="0.00"></textarea>
+         </div>
+         <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_7 col-1_12-12" data-uib="layout/col" data-ver="0">
+           <div class="widget-container content-area vertical-col">
+            <span class="uib_shim"></span>
+           </div>
+          </div>
+          <span class="uib_shim"></span>
+         </div>
+         <div class="table-thing with-label widget uib_w_24 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Date</label>
+          <input class="wide-control" type="text">
+         </div>
+         <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_8 col-1_12-12" data-uib="layout/col" data-ver="0">
+           <div class="widget-container content-area vertical-col">
+            <span class="uib_shim"></span>
+           </div>
+          </div>
+          <span class="uib_shim"></span>
+         </div><a class="button widget uib_w_25 d-margins" data-uib="app_framework/button" data-ver="0" id="btnContribNext">Next</a><span class="uib_shim"></span>
         </div>
        </div>
        <span class="uib_shim"></span>
@@ -110,33 +134,16 @@
          <div class="table-thing with-label widget uib_w_21 d-margins" data-uib="app_framework/input" data-ver="0">
           <label class="narrow-control label-inline">Signer2</label>
           <input class="wide-control" type="text">
-         </div><span class="uib_shim"></span>
-        </div>
-       </div>
-       <span class="uib_shim"></span>
-      </div>
-     </div>
-     <div id="uib_collections" class="upage-content hidden">
-
-      <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
-       <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
-        <div class="widget-container content-area vertical-col">
-
-         <div class="widget uib_w_16 d-margins" data-uib="media/text" data-ver="0">
-          <div class="widget-container left-receptacle"></div>
-          <div class="widget-container right-receptacle"></div>
-          <div>
-           <p>Enter contributions</p>
+         </div>
+         <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_9 col-1_12-12" data-uib="layout/col" data-ver="0">
+           <div class="widget-container content-area vertical-col">
+            <span class="uib_shim"></span>
+           </div>
           </div>
+          <span class="uib_shim"></span>
          </div>
-         <div class="table-thing with-label widget uib_w_17 d-margins" data-uib="app_framework/input" data-ver="0">
-          <label class="narrow-control label-inline">Local</label>
-          <input class="wide-control" type="text">
-         </div>
-         <div class="table-thing with-label widget uib_w_18 d-margins" data-uib="app_framework/input" data-ver="0">
-          <label class="narrow-control label-inline">WWW</label>
-          <input class="wide-control" type="text">
-         </div><span class="uib_shim"></span>
+         <a class="button widget uib_w_26 d-margins" data-uib="app_framework/button" data-ver="0" id="btnSignerNamesNext">Next</a><span class="uib_shim"></span>
         </div>
        </div>
        <span class="uib_shim"></span>
@@ -175,6 +182,25 @@
     </div>
     <!-- /upage-outer -->
 
+   </div>
+   <div class="upage panel" id="uib_signature1" data-header="none" data-footer="none">
+    <div class="upage-outer">
+     <div id="uib_signature1sub" class="upage-content ">
+
+      <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_10 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_27 d-margins iframe-size" data-uib="media/iframe" data-ver="0">
+          <iframe src="signature.html" seamless="seamless"></iframe>
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
    </div>
    <!-- /upage -->
 
