@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+ <head>
+  <link rel="stylesheet" type="text/css" href="app_framework/css/af.ui.min.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="app_framework/css/af.ui.css">
+  <link rel="stylesheet" type="text/css" href="app_framework/css/icons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+  <title>Your New Application</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <style type="text/css">
+   /* Prevent copy paste for all elements except text fields */
+   		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+   		input, textarea  { -webkit-user-select:text; }
+  </style>
+  <script src="intelxdk.js"></script>
+  <script src="cordova.js"></script>
+  <script src="xhr.js"></script>
+  <!--
+      Include xhr.js in your index.html when using web services that make cross origin requests
+      This file makes those requests successfully when testing your apps under the "EMULATE", "BUILD" & "TEST" tab with the 
+      Intel(R) App Preview mobile app.
+      DISCLAIMER: If you don't need to perform these requests, remove the following script (xhr.js)
+  -->
+  <script type="text/javascript">
+   /* This code is used to run as soon as Intel activates */
+   		var onDeviceReady=function(){
+   		//hide splash screen
+   		intel.xdk.device.hideSplashScreen();
+   		};
+   		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+  </script>
+  <script type="application/javascript" src="app_framework/appframework.ui.min.js"></script>
+  <script type="application/javascript" src="js/jquery.min.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+  <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+  <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+  <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+  <script type="application/javascript" src="js/index_user_scripts.js"></script>
+  <script type="application/javascript" src="js/af_subpage.js"></script>
+  <!--   
+   You may substitute jQuery for the App Framework selector library.
+   See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+  -->
+  <script type="application/javascript" src="app_framework/appframework.js"></script>
+ </head>
+
+ <body id="afui">
+
+  <!-- content goes here-->
+  <div class="uwrap" id="content">
+   <div class="upage panel" id="mainpage" data-header="af-header-0" data-footer="none">
+    <div class="upage-outer">
+     <header class="container-group inner-element uib_w_1" data-uib="app_framework/header" data-ver="0" id="af-header-0">
+      <h1>JW Receipts</h1>
+      <div class="widget-container wrapping-col single-centered"></div>
+      <div class="widget-container content-area horiz-area wrapping-col left">
+       <a class="button widget uib_w_9 d-margins icon settings" data-uib="app_framework/button" data-ver="0" id="settingsbtn"></a>
+      </div>
+      <div class="widget-container content-area horiz-area wrapping-col right"></div>
+     </header>
+     <div class="upage-content" id="mainsub">
+
+      <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Enter collection amounts</p>
+          </div>
+         </div>
+         <div class="table-thing with-label widget uib_w_14 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Worldwide Work</label>
+
+          <input class="wide-control" placeholder="0.00" type="text">
+         </div>
+         <div class="table-thing with-label widget uib_w_15 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Local</label>
+
+          <input class="wide-control" type="text" placeholder="0.00">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="uib_signernames" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_19 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Enter signer names</p>
+          </div>
+         </div>
+         <div class="table-thing with-label widget uib_w_20 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Signer1</label>
+          <input class="wide-control" type="text">
+         </div>
+         <div class="table-thing with-label widget uib_w_21 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Signer2</label>
+          <input class="wide-control" type="text">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+     <div id="uib_collections" class="upage-content hidden">
+
+      <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+       <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+        <div class="widget-container content-area vertical-col">
+
+         <div class="widget uib_w_16 d-margins" data-uib="media/text" data-ver="0">
+          <div class="widget-container left-receptacle"></div>
+          <div class="widget-container right-receptacle"></div>
+          <div>
+           <p>Enter contributions</p>
+          </div>
+         </div>
+         <div class="table-thing with-label widget uib_w_17 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">Local</label>
+          <input class="wide-control" type="text">
+         </div>
+         <div class="table-thing with-label widget uib_w_18 d-margins" data-uib="app_framework/input" data-ver="0">
+          <label class="narrow-control label-inline">WWW</label>
+          <input class="wide-control" type="text">
+         </div><span class="uib_shim"></span>
+        </div>
+       </div>
+       <span class="uib_shim"></span>
+      </div>
+     </div>
+
+     <!-- /upage-content -->
+
+     <div class="inner-element uib_w_2 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'push', 'v':260, 'side':'left'}">
+      <div class="sidebar-content">
+
+       <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+        <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+         <div class="widget-container content-area vertical-col">
+
+          <ul class="list widget uib_w_3 d-margins" data-uib="app_framework/listview" data-ver="0">
+           <li class="widget uib_w_4" data-uib="app_framework/listitem" data-ver="0" id="collection-btn"><a class="icon graph">Collection</a>
+           </li>
+
+          </ul>
+          <ul class="list widget uib_w_5 d-margins" data-uib="app_framework/listview" data-ver="0">
+           <li class="widget uib_w_6" data-uib="app_framework/listitem" data-ver="0" id="signernames-btn"><a class="icon user">Signer Names</a>
+           </li>
+           <li class="widget uib_w_7" data-uib="app_framework/listitem" data-ver="0" id="Signature1-btn"><a class="icon pencil">Signature1</a>
+           </li>
+           <li class="widget uib_w_8" data-uib="app_framework/listitem" data-ver="0" id="signature2-btn"><a class="icon pencil">Signature2</a>
+           </li>
+          </ul><span class="uib_shim"></span>
+         </div>
+        </div>
+        <span class="uib_shim"></span>
+       </div>
+
+      </div>
+     </div>
+    </div>
+    <!-- /upage-outer -->
+
+   </div>
+   <!-- /upage -->
+
+  </div>
+  <!-- /uwrap -->
+ </body>
+
+</html>
